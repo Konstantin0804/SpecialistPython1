@@ -10,3 +10,10 @@
 # 1234
 
 # TODO: your code here
+n = int(input("Введите натуральное число:"))
+number = 1
+counter = 1
+while counter <= n:
+    print (number)
+    number = number*10+(counter+1)
+    counter+=1
