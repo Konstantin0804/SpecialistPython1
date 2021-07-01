@@ -4,9 +4,7 @@
 def can_triangle(p1, p2, p3):
     # TODO: your code here
     pass
-
-
-# Пример вызова функции
+ return -((p3[1]-p1[1])/(p2[1]-p1[1])==(p3[0]-p1[0])/(p2[0]-p1[0]))
 can_triangle((10, 12), (14, 18), (12, 12))
-
-# Не забудьте протестировать вашу функцию
+if can_triangle:
+    print("yes")
