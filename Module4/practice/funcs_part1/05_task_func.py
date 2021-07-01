@@ -4,6 +4,25 @@
 # Подсказка: для нахождения площади используйте Теорему Герона
 
 # TODO: your code here
+import math
+def can_triangle(p1, p2, p3):
+    if_work = -((p3[1]-p1[1])/(p2[1]-p1[1])==(p3[0]-p1[0])/(p2[0]-p1[0]))
+    if if_work:
+        a = math.sqrt((p1[1]-p1[0])**2+(p2[1]-p2[1]))
+        b = math.sqrt((p2[1]-p2[0])**2+(p3[1]-p3[1]))
+        c = math.sqrt((p3[1]-p3[0])**2+(p1[1]-p1[1]))
+        p = a+b+c
+        s = math.sqrt(p/2*((p/2-a)*(p/2-b)*(p/2-c)))
+        return s, p
+    return False
 
+can_triangle((10, 12), (14, 18), (12, 12))
+if can_triangle(p1, p2, p3) == False:
+    print("Ошибка")
+else: 
+    print(f"yes, S= {s}, P={p}")
+    
+#данный код выдает ошибки unresolved refference 'p1','p2','p3','s','p'
+#не получается разобраться почему, подскажите пожалуйста
 
 # Не забудьте протестировать вашу функцию
